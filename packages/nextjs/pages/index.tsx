@@ -55,6 +55,16 @@ const Home: NextPage = () => {
                 tab.
               </p>
             </div>
+            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+              <SparklesIcon className="h-8 w-8 fill-secondary" />
+              <p>
+                Experiment with{" "}
+                <Link href="/search" passHref className="link">
+                  Search
+                </Link>{" "}
+                to build your own UI.
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -30,3 +30,27 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+.nft-embed-wrapper>iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nft-embed-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.nft-embed-container {
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}

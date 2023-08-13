@@ -58,3 +58,8 @@ p {
 .fill-available {
   width: -webkit-fill-available;
 }
+
+.scoreboard {
+  right: -10px;
+  top: 35%;
+}

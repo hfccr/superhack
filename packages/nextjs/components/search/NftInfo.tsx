@@ -18,9 +18,9 @@ export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
     error: fairnessError,
     data: fairness,
   } = useNftFairness(nftToken, nftTokenId);
-  const fair = <img src="/assets/stamp_3.svg" />;
-  const unknown = <img src="/assets/stamp_2.svg" />;
-  const unfair = <img src="/assets/stamp_1.svg" />;
+  const fair = <img src="/assets/stamp_3.svg" className="x" />;
+  const unknown = <img src="/assets/stamp_2.svg" className="x" />;
+  const unfair = <img src="/assets/stamp_1.svg" className="x" />;
   let score = <></>;
   if (fairnessSuccess && fairness) {
     if (fairness.score > 0.8) {

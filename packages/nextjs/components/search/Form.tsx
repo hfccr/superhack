@@ -4,8 +4,8 @@ interface IProps {
   onSearch: (nftToken: string, nftTokenId: string) => void;
 }
 
-const DEFAULT_CONTRACT = "0x1A92f7381B9F03921564a437210bB9396471050C";
-const DEFAULT_TOKEN_ID = "4442";
+const DEFAULT_CONTRACT = "0xc2c747e0f7004f9e8817db2ca4997657a7746928";
+const DEFAULT_TOKEN_ID = "13303";
 
 export const Form = ({ onSearch }: IProps) => {
   // const [nftContract, setNftContract] = useState(DEFAULT_CONTRACT);
@@ -22,7 +22,7 @@ export const Form = ({ onSearch }: IProps) => {
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">How FAIR-TRADE is your NFT?</h1>
             <p>
-              NFT Collection: <b>Cool Cats NFT</b>
+              NFT Collection: <b>Hashmasks</b>
             </p>
           </div>
         </div>

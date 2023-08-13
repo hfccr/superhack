@@ -63,3 +63,13 @@ p {
   right: -10px;
   top: 35%;
 }
+
+.nimg {
+  text-align: center;
+  width: 100%;
+  /* height: 100px; */
+}
+
+.istat {
+  max-width: 350px;
+}

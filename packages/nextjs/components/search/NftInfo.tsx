@@ -9,7 +9,7 @@ interface IProps {
 }
 export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
   const { data } = useNFT(nftToken, nftTokenId);
-  const src = `https://embed.zora.co/${nftToken}/${nftTokenId}?title=false&controls=false&loop=false&autoplay=false`;
+  // const src = `https://embed.zora.co/${nftToken}/${nftTokenId}?title=false&controls=false&loop=false&autoplay=false`;
   const title = data?.metadata?.name ? data?.metadata?.name : data?.nft?.contract?.name;
   const owner = data?.nft?.owner?.address;
   const {
@@ -25,7 +25,7 @@ export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
   if (fairnessSuccess && fairness) {
     if (fairness.score > 0.8) {
       score = fair;
-    } else if (fairness.score > 0.5) {
+    } else if (fairness.score >= 0.5) {
       score = unknown;
     } else if (fairness.score >= 0) {
       score = unfair;
@@ -36,22 +36,16 @@ export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
       {/* <NFTPreview id={nftTokenId} contract={nftToken} /> */}
       <>
         <div className="stats shadow stats-vertical lg:stats-horizontal">
-          <div className="stat relative">
+          <div className="stat relative istat">
             <div className="scoreboard text-primary rotate-12 absolute z-50">{score}</div>
             <div className="stat-value">{title ? title : "Loading..."}</div>
             <div className="stat-value text-primary pt-4">
               <figure>
-                {/* <img src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/> */}
-                <div className="nft-embed-container">
-                  <div className="nft-embed-wrapper">
-                    <iframe
-                      src={src}
-                      height="100%"
-                      sandbox="allow-pointer-lock allow-same-origin allow-scripts allow-popups"
-                    ></iframe>
-                    <div></div>
-                  </div>
-                </div>
+                <img
+                  className="nimg"
+                  src="https://hashmasksstore.blob.core.windows.net/hashmaskspreview/7060.png"
+                  alt="Album"
+                />
               </figure>
             </div>
             <div className="stat-desc pt-4">{owner && <Address address={owner} />}</div>

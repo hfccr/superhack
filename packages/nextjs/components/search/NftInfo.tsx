@@ -59,7 +59,7 @@ export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
             <div className="stat-value text-primary justify-self-center">
               {fairnessError && <div className="text-red-500">Error loading fairness data</div>}
               {fairnessFetching && <progress className="progress w-56"></progress>}
-              {fairnessSuccess && <h1 className="text-8xl">{fairness?.score}</h1>}
+              {fairnessSuccess && <h1 className="text-8xl">{(fairness?.score ? fairness.score : 0) * 100 + "%"}</h1>}
             </div>
             {/* <div className="stat-desc">21% more than last month</div> */}
           </div>

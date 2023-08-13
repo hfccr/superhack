@@ -9,7 +9,7 @@ export const TxTable = ({ fairTransactions, unfairTransactions, unknowTransactio
   const sorted = combined.sort((a, b) => parseInt(b.blockTimestamp) - parseInt(a.blockTimestamp));
   const rows = sorted.map((tx, index) => {
     const { type, blockTimestamp } = tx;
-    return <TxTableRow key={index} type={type} blockTimestamp={blockTimestamp} />;
+    return <TxTableRow key={index} type={type} blockTimestamp={blockTimestamp} index={index} />;
   });
   return (
     <div className="overflow-x-auto h-96 w-auto overflow-y-scroll">

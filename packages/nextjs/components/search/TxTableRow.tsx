@@ -4,11 +4,12 @@ import relativeTime from "dayjs/plugin/relativeTime";
 interface ITxTableRow {
   type: string;
   blockTimestamp: string;
+  index: number;
 }
 
 dayjs.extend(relativeTime);
 
-export const TxTableRow = ({ type, blockTimestamp }: ITxTableRow) => {
+export const TxTableRow = ({ type, blockTimestamp, index }: ITxTableRow) => {
   const date = new Date(0);
   date.setUTCSeconds(parseInt(blockTimestamp));
   const unknownRating = (
@@ -47,9 +48,7 @@ export const TxTableRow = ({ type, blockTimestamp }: ITxTableRow) => {
         <br />
         <span className="badge badge-ghost badge-sm">{type}</span>
       </td>
-      <th>
-        <button className="btn btn-ghost btn-xs">Attest</button>
-      </th>
+      <th>{index === 0 ? <button className="btn btn-ghost btn-xs">Attest</button> : <></>}</th>
     </tr>
   );
 };

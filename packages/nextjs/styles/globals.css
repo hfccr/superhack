@@ -54,3 +54,7 @@ p {
   margin: 0 auto;
   position: relative;
 }
+
+.fill-available {
+  width: -webkit-fill-available;
+}

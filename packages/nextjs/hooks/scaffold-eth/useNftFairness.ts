@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 
-interface ITransactions {
+export interface ITransactions {
   interacted_with: string;
   tokenId: string;
   blockTimestamp: string;
 }
 
-interface IFairness {
+export interface IFairness {
   score: number;
-  fairTransactions: ITransactions;
-  unfairTransactions: ITransactions;
-  unknownTransactions: ITransactions;
+  fairTransactions: ITransactions[];
+  unfairTransactions: ITransactions[];
+  unknowTransactions: ITransactions[];
 }
 
-interface IRemoteFairness {
+export interface IRemoteFairness {
   fetching: boolean;
   success: boolean;
   error: boolean;

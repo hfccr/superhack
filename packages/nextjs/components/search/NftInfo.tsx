@@ -32,10 +32,10 @@ export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
     }
   }
   return (
-    <>
+    <div className="statc">
       {/* <NFTPreview id={nftTokenId} contract={nftToken} /> */}
       <>
-        <div className="stats shadow stats-vertical lg:stats-horizontal">
+        <div className="stats shadow stats-vertical lg:stats-horizontal max-w-7xl">
           <div className="stat relative istat">
             <div className="scoreboard text-primary rotate-12 absolute z-50">{score}</div>
             <div className="stat-value">{title ? title : "Loading..."}</div>
@@ -81,6 +81,6 @@ export const NftInfo = ({ nftToken, nftTokenId }: IProps) => {
           </div>
         </div>
       </>
-    </>
+    </div>
   );
 };

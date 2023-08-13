@@ -13,7 +13,7 @@ const Home: NextPage = () => {
             <span className="block text-2xl mb-2">Welcome to</span>
             <span className="block text-4xl font-bold">FAIR NFTs</span>
           </h1>
-          <img src="/assets/Group_3.svg" />
+          <img src="/assets/Group_3.svg" className="heroi" />
         </div>
 
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
